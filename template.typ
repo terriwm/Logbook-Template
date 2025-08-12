@@ -12,6 +12,8 @@
   import "@preview/codly-languages:0.1.1": *
   show: codly-init.with()
   import "@preview/wavy:0.1.3"
+  import "@preview/cetz:0.3.2": canvas, draw
+  import "@preview/cetz-plot:0.1.1": plot
 
   set text(region: "AU")
   show figure: set block(breakable: true)
