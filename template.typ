@@ -9,9 +9,29 @@
   doc
 ) = {
   import "@preview/codly:1.3.0": *
-  import "@preview/codly-languages:0.1.1": *
+  import "@preview/codly-languages:0.1.8": *
   show: codly-init.with()
   import "@preview/wavy:0.1.3"
+
+  let __icon(image-filename) = {
+    box(
+      image(image-filename, height: 0.9em),
+      baseline: 0.05em,
+      inset: 0pt,
+      outset: 0pt,
+    ) + h(0.3em)
+  }
+   
+  codly(
+    aliases: ("ino":"cpp"),
+    languages: (
+      ino: (
+        name: [Arduino],
+        color: blue.lighten(20%),
+        icon: __icon("imgs/Arduino Logo.svg")
+      ),
+    ) + codly-languages
+  )
   
   
   import "@preview/cetz:0.3.2"
@@ -22,6 +42,8 @@
 
   show raw.where(lang: "wavy"): it => wavy.render(it.text)
   show link: underline
+
+  show "Flinduino": [_Flinduino_]
 
   set table(
     stroke: 0.5pt
