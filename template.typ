@@ -94,5 +94,8 @@
     ]
   )
 
+  set par(
+    justify: true,
+  )
   doc
 }
