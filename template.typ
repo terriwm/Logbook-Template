@@ -6,6 +6,7 @@
   prac_title: none,
   subject_code: none,
   subject_name: none,
+  report_type: "Logbook",
   doc
 ) = {
   import "@preview/codly:1.3.0": *
@@ -70,7 +71,7 @@
       #text(
         weight: "semibold",
       )[
-        Practical #prac_number Logbook - #prac_title
+        Practical #prac_number #report_type - #prac_title
       ]
     ]
 
@@ -88,7 +89,7 @@
     margin: (left: 1cm, right: 1cm, top: 1.5cm, bottom: 1.5cm),
     footer: context [
       #line(length:100%) 
-      #subject_name Logbook 
+      #subject_name #report_type 
       #h(1fr) 
       #counter(page).display("1 of 1", both: true)
     ]
