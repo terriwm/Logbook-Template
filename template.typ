@@ -31,8 +31,14 @@
         color: blue.lighten(20%),
         icon: __icon("imgs/Arduino Logo.svg")
       ),
+      vhdl: (
+        name: [VHDL],
+        color: purple.lighten(20%),
+      ),
     ) + codly-languages
   )
+
+  show raw.where(lang: "vhdl"): set raw(syntaxes: "syntax-highlighting/VHDL.sublime-syntax")
   
   
   import "@preview/cetz:0.3.2"
